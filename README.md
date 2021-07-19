@@ -96,4 +96,4 @@ window.game.solver = function (blocksIsWall, i, j) {
 
 ## 说明
 
-- 基于 <a herf="https://github.com/ganlvtech/phaser-catch-the-cat">phaser-catch-the-cat</a> 进行的 UI 改造；最初的游戏的思路和小猫的图片来源于 [www.gamedesign.jp](https://www.gamedesign.jp/flash/chatnoir/chatnoir.html)，原来的游戏名叫 Chat Noir。
+- 基于 [phaser-catch-the-cat](https://github.com/ganlvtech/phaser-catch-the-cat) 进行的 UI 及 Taro 小程序化改造；最初的游戏的思路和小猫的图片来源于 [www.gamedesign.jp](https://www.gamedesign.jp/flash/chatnoir/chatnoir.html)，原来的游戏名叫 Chat Noir。
