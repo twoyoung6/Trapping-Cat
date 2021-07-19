@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>圈住小猫！</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: url(../assets//images/grass.jpeg) no-repeat left top;
+        background-size: cover;
+        background-clip: border-box;
+        background-attachment: fixed;
+      }
+      a {
+        margin-top: 20vh;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        font-size: 30px;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        background-color: cadetblue;
+        border-radius: 50%;
+        padding: 26px;
+        box-sizing: border-box;
+      }
+      ul,
+      li {
+        padding-left: 20px;
+        font-size: 11px;
+        list-style: none;
+        color: cadetblue;
+        margin: 0;
+      }
+      img {
+        position: absolute;
+        bottom: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./game.html" rel="noopener noreferrer">
+      <div>开始</div>
+      <div>游戏</div>
+    </a>
+    <ul>
+      <li>- 点击小圆点，围住小猫;</li>
+      <li>- 你点击一次，小猫走一次;</li>
+      <li>- 小猫围住（赢），小猫跑出边界外（输）。</li>
+    </ul>
+    <img src="../assets/images/xh_matting.gif" alt="" />
+  </body>
+</html>
