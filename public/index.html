@@ -21,6 +21,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         width: 120px;
         height: 120px;
         font-size: 30px;
@@ -32,6 +33,53 @@
         border-radius: 50%;
         padding: 26px;
         box-sizing: border-box;
+        animation-name: mybtn;
+        animation-duration: 1.2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-play-state: running;
+        -webkit-highlight: none;
+        -webkit-tap-highlight-color: 0;
+      }
+      @keyframes mybtn {
+        from {
+          width: 120px;
+          height: 120px;
+          background-color: rgba(95, 158, 160, 0.75);
+        }
+        to {
+          width: 116px;
+          height: 116px;
+          background-color: rgba(95, 158, 160, 1);
+        }
+      }
+
+      @-moz-keyframes mybtn {
+        from {
+          background-color: rgba(95, 158, 160, 0.75);
+        }
+        to {
+          background-color: rgba(95, 158, 160, 1);
+        }
+      }
+
+      @-webkit-keyframes mybtn {
+        from {
+          background-color: rgba(95, 158, 160, 0.75);
+        }
+        to {
+          background-color: rgba(95, 158, 160, 1);
+        }
+      }
+
+      @-o-keyframes mybtn {
+        from {
+          background-color: rgba(95, 158, 160, 0.75);
+        }
+        to {
+          background-color: rgba(95, 158, 160, 1);
+        }
       }
       ul,
       li {
@@ -52,11 +100,11 @@
       <div>开始</div>
       <div>游戏</div>
     </a>
-    <ul>
+    <!-- <ul>
       <li>- 点击小圆点，围住小猫;</li>
       <li>- 你点击一次，小猫走一次;</li>
       <li>- 小猫围住（赢），小猫跑出边界外（输）。</li>
-    </ul>
+    </ul> -->
     <img src="../assets/images/xh_matting.gif" alt="" />
   </body>
 </html>

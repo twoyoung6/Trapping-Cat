@@ -1,4 +1,4 @@
-# 捉住小猫
+# 圈住小猫
 
 [![Build Status](https://www.travis-ci.org/ganlvtech/phaser-catch-the-cat.svg?branch=master)](https://www.travis-ci.org/ganlvtech/phaser-catch-the-cat)
 
@@ -96,4 +96,4 @@ window.game.solver = function (blocksIsWall, i, j) {
 
 ## 说明
 
-- 游戏的思路和小猫的图片来源于 [www.gamedesign.jp](https://www.gamedesign.jp/flash/chatnoir/chatnoir.html)，原来的游戏名叫 Chat Noir，我只是尝试用 javascript 重写一遍。
+- 基于 <a herf="https://github.com/ganlvtech/phaser-catch-the-cat">phaser-catch-the-cat</a> 进行的 UI 改造；最初的游戏的思路和小猫的图片来源于 [www.gamedesign.jp](https://www.gamedesign.jp/flash/chatnoir/chatnoir.html)，原来的游戏名叫 Chat Noir。
