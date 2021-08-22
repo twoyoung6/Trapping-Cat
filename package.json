@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ganlv",
+  "author": "Twoyoung",
   "license": "MIT",
   "dependencies": {
     "phaser": "^3.16.1"
