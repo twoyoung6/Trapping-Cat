@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>選擇游戲難度</title>
+    <style>
+      body {
+        min-height: 100vh;
+        background: url('../assets//images/bg.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        border: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .icon {
+        width: 88px;
+        height: auto;
+        position: fixed;
+        bottom: 45px;
+        left: calc(50% - 45px);
+      }
+      h1 {
+        font-size: 22px;
+        font-family: STHupo, Tahoma, Tahoma, Helvetica, Arial, ‘宋体‘,
+          sans-serif;
+        padding-bottom: 30px;
+        letter-spacing: 5px;
+      }
+      .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 13%;
+      }
+      .btn {
+        font-size: 16px;
+        margin: 15px 0 0;
+        font-family: STHupo, Tahoma, Tahoma, Helvetica, Arial, ‘宋体‘,
+          sans-serif;
+        letter-spacing: 5px;
+        padding: 10px 30px;
+        background-color: transparent;
+        border: 2px dashed #000;
+        border-radius: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>選擇游戲難度</h1>
+      <div class="btn" id="0">初級難度</div>
+      <div class="btn" id="1">中級難度</div>
+      <div class="btn" id="2">高級難度</div>
+    </div>
+    <img class="icon" src="../assets/images/icon.gif" alt="" />
+    <script>
+      var nodeList = Array.from(new Set(document.querySelectorAll('.btn')))
+      console.log(nodeList)
+      var grade = '0'
+      for (let i = 0; i < nodeList.length; i++) {
+        const element = nodeList[i]
+        element.addEventListener('click', function (e) {
+          grade = e.target.id ? e.target.id : '0'
+          localStorage.setItem('cat-grade', grade)
+          window.location.href = 'game.html'
+        })
+      }
+    </script>
+  </body>
+</html>

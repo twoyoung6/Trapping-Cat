@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>圈住小猫！</title>
+    <title>圈住小貓！</title>
     <style>
       body {
         display: flex;
@@ -14,6 +14,11 @@
         background-size: cover;
         background-clip: border-box;
         background-attachment: fixed;
+        border: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        box-sizing: border-box;
       }
       a {
         margin-top: 20vh;
@@ -24,61 +29,60 @@
         flex-direction: column;
         width: 120px;
         height: 120px;
+        font-family: STHupo, Tahoma, Tahoma, Helvetica, Arial, ‘宋体‘,
+          sans-serif;
         font-size: 30px;
         color: #fff;
-        font-weight: 600;
         text-decoration: none;
         cursor: pointer;
-        background-color: cadetblue;
+        background-color: #ee3f4d;
         border-radius: 50%;
         padding: 26px;
         box-sizing: border-box;
-        animation-name: mybtn;
-        animation-duration: 1.2s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-play-state: running;
+        animation: breathe 2s infinite;
         -webkit-highlight: none;
         -webkit-tap-highlight-color: 0;
       }
-      @keyframes mybtn {
-        from {
-          width: 120px;
-          height: 120px;
-          background-color: rgba(95, 158, 160, 0.75);
+      @-webkit-keyframes breathe {
+        0% {
+          box-shadow: 0px 13px 30px -10px rgba(0, 0, 0, 0.8);
+          -webkit-transform: rotate3d(0, 0, 0, 5deg) translate3d(0, 0, 0);
+          transform: rotate3d(0, 0, 0, 5deg) translate3d(0, 0, 0);
+          opacity: 0.75;
         }
-        to {
-          width: 116px;
-          height: 116px;
-          background-color: rgba(95, 158, 160, 1);
+        50% {
+          box-shadow: 0px 60px 30px -30px rgba(0, 0, 0, 0.3);
+          -webkit-transform: rotate3d(-30, 0, -10, 2deg)
+            translate3d(2px, -2px, 30px);
+          transform: rotate3d(-30, 0, -10, 2deg) translate3d(2px, -2px, 30px);
+          opacity: 1;
         }
-      }
-
-      @-moz-keyframes mybtn {
-        from {
-          background-color: rgba(95, 158, 160, 0.75);
-        }
-        to {
-          background-color: rgba(95, 158, 160, 1);
-        }
-      }
-
-      @-webkit-keyframes mybtn {
-        from {
-          background-color: rgba(95, 158, 160, 0.75);
-        }
-        to {
-          background-color: rgba(95, 158, 160, 1);
+        100% {
+          box-shadow: 0px 13px 30px -10px rgba(0, 0, 0, 0.8);
+          -webkit-transform: rotate3d(0, 0, 0, 5deg) translate3d(0, 0, 0);
+          transform: rotate3d(0, 0, 0, 5deg) translate3d(0, 0, 0);
+          opacity: 0.75;
         }
       }
-
-      @-o-keyframes mybtn {
-        from {
-          background-color: rgba(95, 158, 160, 0.75);
+      @keyframes breathe {
+        0% {
+          box-shadow: 0px 13px 30px -10px rgba(0, 0, 0, 0.8);
+          -webkit-transform: rotate3d(0, 0, 0, 5deg) translate3d(0, 0, 0);
+          transform: rotate3d(0, 0, 0, 5deg) translate3d(0, 0, 0);
+          opacity: 0.75;
         }
-        to {
-          background-color: rgba(95, 158, 160, 1);
+        50% {
+          box-shadow: 0px 60px 30px -30px rgba(0, 0, 0, 0.3);
+          -webkit-transform: rotate3d(-30, 0, -10, 2deg)
+            translate3d(2px, -2px, 30px);
+          transform: rotate3d(-30, 0, -10, 2deg) translate3d(2px, -2px, 30px);
+          opacity: 1;
+        }
+        100% {
+          box-shadow: 0px 13px 30px -10px rgba(0, 0, 0, 0.8);
+          -webkit-transform: rotate3d(0, 0, 0, 5deg) translate3d(0, 0, 0);
+          transform: rotate3d(0, 0, 0, 5deg) translate3d(0, 0, 0);
+          opacity: 0.75;
         }
       }
       ul,
@@ -96,15 +100,15 @@
     </style>
   </head>
   <body>
-    <a href="./game.html" rel="noopener noreferrer">
-      <div>开始</div>
-      <div>游戏</div>
+    <a href="./grade.html" rel="noopener noreferrer">
+      <div>開始</div>
+      <div>游戲</div>
     </a>
     <!-- <ul>
       <li>- 点击小圆点，围住小猫;</li>
       <li>- 你点击一次，小猫走一次;</li>
       <li>- 小猫围住（赢），小猫跑出边界外（输）。</li>
     </ul> -->
-    <img src="../assets/images/xh_matting.gif" alt="" />
+    <img src="../assets/images/xh.gif" alt="" />
   </body>
 </html>

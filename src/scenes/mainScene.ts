@@ -208,9 +208,10 @@ export default class MainScene extends Phaser.Scene {
   }
 
   reset() {
+    var num = localStorage.getItem('cat-grade')
     this.cat.reset()
     this.resetBlocks()
-    this.randomWall()
+    this.randomWall(num)
     this.state = GameState.PLAYING
     this.setStatusText(_('点击小圆点，围住小猫'))
   }
@@ -292,8 +293,22 @@ export default class MainScene extends Phaser.Scene {
     })
   }
   // 随机生成已经存在初始的圆点
-  private randomWall() {
-    for (let k = 0; k < 10; k++) {
+  private randomWall(catClass) {
+      // 难度 0 1 2 对应生成初始的默认落子数量，默认落子数量越多，难度越低
+      var num = 10
+      switch (~~catClass) {
+        case 0:
+          num = 12
+          break
+        case 1:
+          num = 10
+          break
+        case 2:
+          num = 9
+          break
+      }
+      console.log('num----', catClass, num)
+    for (let k = 0; k < num; k++) {
       let i = Math.floor(this.w * Math.random())
       let j = Math.floor(this.h * Math.random())
       if (i !== this.cat.i || j !== this.cat.j) {

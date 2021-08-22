@@ -2,12 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=0.7, maximum-scale=1.0, user-scalable=0"
-      charset="UTF-8"
-    />
-    <title>圈住小猫！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>圈住小貓！</title>
     <style>
       * {
         padding: 0;
@@ -16,8 +12,12 @@
 
       html,
       body {
+        border: none;
         margin: 0;
         background-color: rgb(238, 247, 242);
+        padding: 0;
+        overflow: hidden;
+        box-sizing: border-box;
       }
       #catch-the-cat {
         display: flex;
@@ -38,12 +38,12 @@
   <body>
     <script src="phaser.min.js"></script>
     <script src="catch-the-cat.js"></script>
-    <img src="../assets//images/p2629969147.webp" alt="焦点图" class="head" />
+    <img src="../assets//images/banner.webp" alt="焦点图" class="head" />
     <div id="catch-the-cat"></div>
     <script>
       window.game = new CatchTheCatGame({
-        w: 9,
-        h: 9,
+        w: 9, // 棋盘横轴子数
+        h: 9, // 棋盘纵轴子数
         r: 150,
         backgroundColor: 0xeef7f2,
         parent: 'catch-the-cat',
